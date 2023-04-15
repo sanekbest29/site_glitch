@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-sm">
+            <div>
+                <h3>{{current_user.login}}</h3>
+                <img src="{{avatar}}" alt="Тут должна быть аватарка" width="200">
+                <form enctype="multipart/form-data" method="POST">
+                    <p>
+                    <div>
+                        <label for="load-avatar" class="btn btn-primary">Загрузить иконку профиля</label>
+                        <input class="load-avatar-input" accept="image/*" type='file' name="avatar"
+                               onchange="form.submit()" id="load-avatar">
+                    </div>
+                    </p>
+                    <p>
+
+                    </p>
+                </form>
+                <p>
+                <button type="button" onclick="window.location.href = '/create_post';"
+                        class="btn btn-primary">
+                    Создать пост
+                </button>
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <br>
+    <a>&#8195</a><br>
+    <a>&#8195</a><br>
+</div>
+</div>
+{% endblock %}
